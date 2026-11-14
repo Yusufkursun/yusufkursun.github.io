@@ -1,111 +1,109 @@
-// --- Mobile Menu Toggle ---
-const menuIcon = document.querySelector('.menu-icon');
-const navLinks = document.querySelector('.nav-links');
+// Terminal simülasyonu ve dinamik yıl güncellemesi (Saf JavaScript)
 
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Change icon between menu and close
-    const icon = menuIcon.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.classList.remove('bx-menu');
-        icon.classList.add('bx-x');
+const COMMANDS = ["help", "whoami", "skills", "quests", "certs", "contact", "sudo", "clear"];
+
+const STATIC_OUTPUTS = {
+  help: [
+    { kind: "out", text: "Kullanılabilir komutlar:" },
+    { kind: "out", text: "  " + COMMANDS.join("  ") },
+  ],
+  whoami: [
+    { kind: "out", text: "YUSUF KURŞUN — SİBER GÜVENLİK UZMANI" },
+    { kind: "out", text: "Sınıf: Beyaz Şapkalı Hacker | LVL 99" },
+  ],
+  skills: [
+    { kind: "out", text: "Sızma Testi............... █████████░" },
+    { kind: "out", text: "Ağ Güvenliği.............. █████████░" },
+    { kind: "out", text: "Web Uyg. Güvenliği........ ████████░░" },
+    { kind: "out", text: "Zararlı Yazılım Analizi... ███████░░░" },
+    { kind: "out", text: "Olay Müdahalesi / DFIR.... ████████░░" },
+    { kind: "out", text: "Bulut Güvenliği........... ███████░░░" },
+    { kind: "out", text: "OSINT..................... ████████░░" },
+    { kind: "out", text: "Tersine Mühendislik....... ██████░░░░" },
+  ],
+  quests: [
+    { kind: "out", text: "[✓] Kurumsal Ağ Sızma Testi ★★★★★" },
+    { kind: "out", text: "[✓] SOC & SIEM Kurulumu ★★★★" },
+    { kind: "out", text: "[✓] Fidye Yazılımı Analizi ★★★★" },
+    { kind: "out", text: "[✓] Bug Bounty: Kritik IDOR ★★★" },
+  ],
+  certs: [
+    { kind: "out", text: "🏆 OSCP — Offensive Security Certified Professional" },
+    { kind: "out", text: "🏆 CEH — Certified Ethical Hacker" },
+    { kind: "out", text: "🏆 SEC+ — CompTIA Security+" },
+    { kind: "out", text: "🏆 CTF — Ulusal CTF Yarışması — 1.lik" },
+  ],
+  contact: [
+    { kind: "out", text: "E-posta: yusuf77krsn@gmail.com" },
+    { kind: "out", text: "GITHUB: https://github.com/Yusufkursun" },
+    { kind: "out", text: "LINKEDIN: https://www.linkedin.com/in/yusuf-kur%C5%9Fun-ba00401a3/" },
+  ],
+  sudo: [{ kind: "err", text: "Güzel deneme. Bu olay raporlanacak. 👀" }],
+};
+
+function runCommand(raw) {
+  const cmd = raw.trim().toLowerCase().split(/\s+/)[0];
+  if (!cmd) return [];
+  if (cmd === "clear") return null;
+  return (
+    STATIC_OUTPUTS[cmd] || [
+      { kind: "err", text: `komut bulunamadı: ${cmd}. 'help' yazmayı dene.` },
+    ]
+  );
+}
+
+const COLOR_CLASS = {
+  in: "text-foreground",
+  out: "text-primary",
+  err: "text-destructive",
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const yearEl = document.getElementById("current-year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  const terminalBox = document.getElementById("terminal-box");
+  const terminalOutput = document.getElementById("terminal-output");
+  const terminalScroll = document.getElementById("terminal-scroll");
+  const terminalForm = document.getElementById("terminal-form");
+  const terminalInput = document.getElementById("terminal-input");
+
+  if (!terminalBox || !terminalOutput || !terminalScroll || !terminalForm || !terminalInput) return;
+
+  const appendLine = ({ kind, text }) => {
+    const p = document.createElement("p");
+    p.className = `terminal-line ${COLOR_CLASS[kind] || "text-primary"}`;
+    if (kind === "in") {
+      const prompt = document.createElement("span");
+      prompt.className = "text-accent";
+      prompt.textContent = "$ ";
+      p.appendChild(prompt);
+    }
+    const span = document.createElement("span");
+    span.textContent = text;
+    p.appendChild(span);
+    terminalOutput.appendChild(p);
+  };
+
+  terminalBox.addEventListener("click", () => {
+    if (!window.getSelection()?.toString()) {
+      terminalInput.focus();
+    }
+  });
+
+  terminalForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const value = terminalInput.value;
+    const result = runCommand(value);
+
+    if (result === null) {
+      terminalOutput.innerHTML = "";
     } else {
-        icon.classList.remove('bx-x');
-        icon.classList.add('bx-menu');
+      appendLine({ kind: "in", text: value });
+      result.forEach(appendLine);
     }
-});
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links li a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = menuIcon.querySelector('i');
-        icon.classList.remove('bx-x');
-        icon.classList.add('bx-menu');
-    });
-});
-
-
-// --- Typewriter Effect ---
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["Siber Güvenlik Meraklısı", "Etik Hacker", "Güvenlik Araştırmacısı", "Yazılım Geliştirici"];
-const typingDelay = 100;
-const erasingDelay = 50;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-    } 
-    else {
-        cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
-    }
-}
-
-function erase() {
-    if (charIndex > 0) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-    } 
-    else {
-        cursorSpan.classList.remove("typing");
-        textArrayIndex++;
-        if(textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, typingDelay + 1100);
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-    if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
-
-
-// --- Scroll Reveal Animation ---
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150; // trigger point
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        }
-    }
-}
-
-// Add the 'reveal' class to sections we want to animate
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.section-title, .about-content, .skills-container, .project-card, .contact-content');
-    sections.forEach(section => {
-        section.classList.add('reveal');
-    });
-    
-    // Trigger once on load
-    reveal();
-});
-
-window.addEventListener("scroll", reveal);
-
-// --- Navbar Background on Scroll ---
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(18, 18, 18, 0.95)';
-        navbar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.4)';
-    } else {
-        navbar.style.background = 'rgba(18, 18, 18, 0.85)';
-        navbar.style.boxShadow = 'none';
-    }
+    terminalInput.value = "";
+    terminalScroll.scrollTop = terminalScroll.scrollHeight;
+  });
 });

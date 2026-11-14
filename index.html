@@ -1,206 +1,534 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yusuf Kurşun - Bilgisayar Mühendisliği Öğrencisi ve Siber Güvenlik Meraklısı Portfolyosu">
-    <title>Yusuf Kurşun | Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Boxicons for Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#" class="logo">YK<span class="cursor-blink">_</span></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yusuf Kurşun — Siber Güvenlik Uzmanı</title>
+    <meta
+      name="description"
+      content="Yusuf Kurşun'un 8-bit piksel art portfolyosu: sızma testi, olay müdahalesi, projeler ve sertifikalar."
+    />
+    <meta name="author" content="Yusuf Kurşun" />
+    <meta property="og:title" content="Yusuf Kurşun — Siber Güvenlik Uzmanı" />
+    <meta
+      property="og:description"
+      content="Yusuf Kurşun'un 8-bit piksel art portfolyosu: sızma testi, olay müdahalesi, projeler ve sertifikalar."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="scanlines">
+    <!-- NAVBAR -->
+    <header class="site-header">
+      <nav class="container nav-bar">
+        <a href="#top" class="brand">&gt;YK_<span class="animate-blink">█</span></a>
         <ul class="nav-links">
-            <li><a href="#about">Hakkımda</a></li>
-            <li><a href="#skills">Yetenekler</a></li>
-            <li><a href="#projects">Projeler</a></li>
-            <li><a href="#contact">İletişim</a></li>
+          <li><a href="#hakkimda" class="nav-link"><span class="arrow">▶</span> HAKKIMDA</a></li>
+          <li><a href="#yetenekler" class="nav-link"><span class="arrow">▶</span> YETENEKLER</a></li>
+          <li><a href="#gorevler" class="nav-link"><span class="arrow">▶</span> GÖREVLER</a></li>
+          <li><a href="#basarimlar" class="nav-link"><span class="arrow">▶</span> BAŞARIMLAR</a></li>
+          <li><a href="#iletisim" class="nav-link"><span class="arrow">▶</span> İLETİŞİM</a></li>
         </ul>
-        <div class="menu-icon">
-            <i class='bx bx-menu'></i>
+        <span class="nav-hearts" aria-hidden="true">♥♥♥</span>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <img
+          src="assets/pixel-city.jpg"
+          alt=""
+          width="1920"
+          height="832"
+          fetchpriority="high"
+          decoding="async"
+          class="hero-bg"
+        />
+        <div class="hero-fade"></div>
+
+        <div class="container hero-hud">
+          <div>
+            <p class="text-accent">1UP</p>
+            <p class="hero-hud-val">YKURSUN</p>
+          </div>
+          <div style="text-align: center">
+            <p class="text-accent">HI-SCORE</p>
+            <p class="hero-hud-val">0xDEADBEEF</p>
+          </div>
+          <div style="text-align: right">
+            <p class="text-accent">LVL</p>
+            <p class="hero-hud-val">99</p>
+          </div>
         </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <p class="greeting">Merhaba, ben</p>
-            <h1 class="name">Yusuf Kurşun</h1>
-            <h2 class="title">
-                <span class="terminal-prompt">></span>
-                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-            </h2>
-            <p class="description">
-                Siber güvenliğe ve yapay zekaya tutkulu bilgisayar mühendisliği öğrencisiyim. 
-                Sistemleri güvende tutmayı, açıklar bulmayı ve güvenli kod yazmayı seviyorum.
+
+        <div class="container hero-grid">
+          <div>
+            <p class="hero-player">PLAYER 1 SEÇİLDİ</p>
+            <h1 class="hero-name">
+              YUSUF<br />
+              <span class="text-secondary">KURŞUN</span>
+            </h1>
+            <p class="hero-role">&gt; SİBER GÜVENLİK UZMANI<span class="animate-blink">_</span></p>
+            <p class="hero-tagline">
+              Sızma testi · Olay müdahalesi · Güvenlik mimarisi. Saldırganlardan bir adım önde.
             </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Projelerimi Gör</a>
-                <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+            <div class="hero-actions">
+              <a href="#hakkimda" class="pixel-btn pixel-btn-primary">
+                <span class="animate-blink">▶</span> PRESS START
+              </a>
+              <a href="#iletisim" class="pixel-btn pixel-btn-accent">İLETİŞİME GEÇ</a>
             </div>
+          </div>
+
+          <div class="hero-sprite-wrap">
+            <img
+              src="assets/hacker-sprite.png"
+              alt="Laptop başında oturan kapüşonlu piksel hacker karakteri"
+              width="816"
+              height="816"
+              decoding="async"
+              class="hero-sprite animate-bob"
+            />
+          </div>
         </div>
-        <div class="hero-graphic">
-            <div class="shield-container">
-                <i class='bx bx-shield-quarter shield-icon'></i>
-                <div class="ring ring-1"></div>
-                <div class="ring ring-2"></div>
-                <div class="ring ring-3"></div>
+      </section>
+
+      <!-- TICKER -->
+      <div class="ticker">
+        <div class="ticker-track animate-marquee">
+          <span>PENTEST <span class="ticker-star">✦</span></span>
+          <span>RED TEAM <span class="ticker-star">✦</span></span>
+          <span>BLUE TEAM <span class="ticker-star">✦</span></span>
+          <span>DFIR <span class="ticker-star">✦</span></span>
+          <span>MALWARE ANALİZİ <span class="ticker-star">✦</span></span>
+          <span>OSINT <span class="ticker-star">✦</span></span>
+          <span>BUG BOUNTY <span class="ticker-star">✦</span></span>
+          <span>CTF <span class="ticker-star">✦</span></span>
+          <span>THREAT HUNTING <span class="ticker-star">✦</span></span>
+          <span>PENTEST <span class="ticker-star">✦</span></span>
+          <span>RED TEAM <span class="ticker-star">✦</span></span>
+          <span>BLUE TEAM <span class="ticker-star">✦</span></span>
+          <span>DFIR <span class="ticker-star">✦</span></span>
+          <span>MALWARE ANALİZİ <span class="ticker-star">✦</span></span>
+          <span>OSINT <span class="ticker-star">✦</span></span>
+          <span>BUG BOUNTY <span class="ticker-star">✦</span></span>
+          <span>CTF <span class="ticker-star">✦</span></span>
+          <span>THREAT HUNTING <span class="ticker-star">✦</span></span>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section id="hakkimda" class="container section">
+        <div class="section-heading">
+          <p class="section-stage">STAGE 1-1</p>
+          <h2 class="section-title">KARAKTER PROFİLİ</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="pixel-panel frame-primary" style="padding: 1.5rem">
+            <dl class="attr-list">
+              <div class="attr-row">
+                <dt class="attr-label">İSİM</dt>
+                <dd>YUSUF KURŞUN</dd>
+              </div>
+              <div class="attr-row">
+                <dt class="attr-label">SINIF</dt>
+                <dd>Beyaz Şapkalı Hacker</dd>
+              </div>
+              <div class="attr-row">
+                <dt class="attr-label">HİZALAMA</dt>
+                <dd>Lawful Good</dd>
+              </div>
+              <div class="attr-row">
+                <dt class="attr-label">KONUM</dt>
+                <dd>İstanbul, TR</dd>
+              </div>
+              <div class="attr-row">
+                <dt class="attr-label">SEVİYE</dt>
+                <dd>99</dd>
+              </div>
+            </dl>
+
+            <div class="stats-list">
+              <div>
+                <div class="stat-header">
+                  <span>HP</span>
+                  <span class="text-muted">100/100</span>
+                </div>
+                <div class="stat-bar">
+                  <div class="stat-fill bg-destructive" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stat-header">
+                  <span>MP</span>
+                  <span class="text-muted">85/100</span>
+                </div>
+                <div class="stat-bar">
+                  <div class="stat-fill bg-cyan" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stat-header">
+                  <span>XP</span>
+                  <span class="text-muted">92/100</span>
+                </div>
+                <div class="stat-bar">
+                  <div class="stat-fill bg-secondary" style="width: 92%"></div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="pixel-panel dialog-box">
+            <p class="dialog-title">▼ DİYALOG</p>
+            <div class="dialog-body">
+              <p>
+                Sistemlerin zayıf noktalarını saldırganlardan önce bulmak için çalışıyorum. Sızma
+                testleri, olay müdahalesi ve güvenlik mimarisi alanlarında kurumların savunma
+                hattını güçlendiriyorum.
+              </p>
+              <p>
+                Benim için güvenlik bir oyun gibi: her ağ yeni bir harita, her zafiyet gizli bir
+                oda, her yama ise kazanılmış bir seviye.
+              </p>
+            </div>
+            <p class="dialog-cursor"><span class="animate-blink">▼</span></p>
+          </div>
         </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="section-title">
-            <h2><span class="hash">#</span> Hakkımda</h2>
+      </section>
+
+      <!-- SKILLS & INVENTORY -->
+      <section id="yetenekler" class="section-banded pixel-grid-bg">
+        <div class="container section">
+          <div class="section-heading">
+            <p class="section-stage">STAGE 1-2</p>
+            <h2 class="section-title">YETENEK AĞACI</h2>
+            <p class="section-sub">Yıllar içinde kasılan istatistikler.</p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="pixel-panel frame-cyan skills-panel">
+              <div class="skill-row">
+                <span class="skill-name">Sızma Testi</span>
+                <div class="skill-segments" aria-label="Sızma Testi: 9/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Ağ Güvenliği</span>
+                <div class="skill-segments" aria-label="Ağ Güvenliği: 9/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Web Uyg. Güvenliği</span>
+                <div class="skill-segments" aria-label="Web Uyg. Güvenliği: 8/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Zararlı Yazılım Analizi</span>
+                <div class="skill-segments" aria-label="Zararlı Yazılım Analizi: 7/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Olay Müdahalesi / DFIR</span>
+                <div class="skill-segments" aria-label="Olay Müdahalesi / DFIR: 8/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Bulut Güvenliği</span>
+                <div class="skill-segments" aria-label="Bulut Güvenliği: 7/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">OSINT</span>
+                <div class="skill-segments" aria-label="OSINT: 8/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="skill-name">Tersine Mühendislik</span>
+                <div class="skill-segments" aria-label="Tersine Mühendislik: 6/10">
+                  <span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-primary"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span><span class="skill-seg bg-terminal"></span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="inventory-title">ENVANTER</p>
+              <div class="inventory-grid">
+                <div class="pixel-panel inventory-item" title="Burp Suite">
+                  <span class="inventory-glyph">◆</span>
+                  <span class="inventory-name">Burp Suite</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Nmap">
+                  <span class="inventory-glyph">◎</span>
+                  <span class="inventory-name">Nmap</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Wireshark">
+                  <span class="inventory-glyph">≋</span>
+                  <span class="inventory-name">Wireshark</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Metasploit">
+                  <span class="inventory-glyph">✦</span>
+                  <span class="inventory-name">Metasploit</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Ghidra">
+                  <span class="inventory-glyph">⚙</span>
+                  <span class="inventory-name">Ghidra</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Splunk">
+                  <span class="inventory-glyph">▤</span>
+                  <span class="inventory-name">Splunk</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Kali Linux">
+                  <span class="inventory-glyph">☠</span>
+                  <span class="inventory-name">Kali Linux</span>
+                </div>
+                <div class="pixel-panel inventory-item" title="Python">
+                  <span class="inventory-glyph">λ</span>
+                  <span class="inventory-name">Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    Bilgisayar Mühendisliği 4. sınıf öğrencisi olarak akademik yolculuğum boyunca yazılım geliştirme ve sistem mimarileri üzerine sağlam bir temel inşa ettim. Ancak asıl tutkum her zaman <strong>siber güvenlik</strong> ve <strong>yapay zeka</strong> oldu.
+      </section>
+
+      <!-- QUESTS -->
+      <section id="gorevler" class="container section">
+        <div class="section-heading">
+          <p class="section-stage">STAGE 2-1</p>
+          <h2 class="section-title">TAMAMLANAN GÖREVLER</h2>
+          <p class="section-sub">Seçilmiş projeler ve operasyonlar.</p>
+        </div>
+
+        <div class="quests-grid">
+          <article class="pixel-panel quest-card">
+            <div class="quest-meta">
+              <p class="text-muted">GÖREV #01</p>
+              <p class="text-primary">✓ TAMAMLANDI</p>
+            </div>
+            <h3 class="quest-title">Kurumsal Ağ Sızma Testi</h3>
+            <p class="quest-desc">
+              500+ uç noktalı bir şirket ağında iç ve dış sızma testi. Domain Admin yetkisine giden
+              3 farklı saldırı yolu raporlandı ve kapatıldı.
+            </p>
+            <div class="quest-footer">
+              <div class="quest-tags">
+                <span class="quest-tag">Active Directory</span>
+                <span class="quest-tag">Red Team</span>
+              </div>
+              <div style="text-align: right">
+                <p class="text-secondary" aria-label="Zorluk 5/5">★★★★★</p>
+                <p class="quest-reward">+2500 XP</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pixel-panel quest-card">
+            <div class="quest-meta">
+              <p class="text-muted">GÖREV #02</p>
+              <p class="text-primary">✓ TAMAMLANDI</p>
+            </div>
+            <h3 class="quest-title">SOC &amp; SIEM Kurulumu</h3>
+            <p class="quest-desc">
+              Sıfırdan güvenlik operasyon merkezi kurulumu, log kaynaklarının entegrasyonu ve özel
+              tespit kuralları ile ortalama tespit süresi %60 azaltıldı.
+            </p>
+            <div class="quest-footer">
+              <div class="quest-tags">
+                <span class="quest-tag">Blue Team</span>
+                <span class="quest-tag">Splunk</span>
+              </div>
+              <div style="text-align: right">
+                <p class="text-secondary" aria-label="Zorluk 4/5">
+                  ★★★★<span style="color: var(--border)">★</span>
                 </p>
-                <p>
-                    Ağ güvenliği, penetrasyon testleri ve savunma stratejileri konularında kendimi sürekli geliştiriyorum. Amacım, karmaşık sistemlerdeki güvenlik zafiyetlerini proaktif bir yaklaşımla tespit edip, daha güvenli dijital ortamlar yaratmak.
+                <p class="quest-reward">+1800 XP</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pixel-panel quest-card">
+            <div class="quest-meta">
+              <p class="text-muted">GÖREV #03</p>
+              <p class="text-primary">✓ TAMAMLANDI</p>
+            </div>
+            <h3 class="quest-title">Fidye Yazılımı Analizi</h3>
+            <p class="quest-desc">
+              Gerçek bir saldırıda kullanılan fidye yazılımının statik ve dinamik analizi. IOC
+              listesi ve YARA kuralları topluluk ile paylaşıldı.
+            </p>
+            <div class="quest-footer">
+              <div class="quest-tags">
+                <span class="quest-tag">Malware</span>
+                <span class="quest-tag">DFIR</span>
+              </div>
+              <div style="text-align: right">
+                <p class="text-secondary" aria-label="Zorluk 4/5">
+                  ★★★★<span style="color: var(--border)">★</span>
                 </p>
-                <p>
-                    Aynı zamanda <strong>T3 Vakfında 6 yıldır gönüllüyüm</strong> ve <strong>İESÜ Teknofest kulübü temsilcisiyim.</strong> Teknoloji ekosistemine katkı sağlamaktan ve yenilikçi projeler üretmekten büyük keyif alıyorum.
+                <p class="quest-reward">+1500 XP</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pixel-panel quest-card">
+            <div class="quest-meta">
+              <p class="text-muted">GÖREV #04</p>
+              <p class="text-primary">✓ TAMAMLANDI</p>
+            </div>
+            <h3 class="quest-title">Bug Bounty: Kritik IDOR</h3>
+            <p class="quest-desc">
+              Büyük bir e-ticaret platformunda milyonlarca kullanıcı verisine erişime izin veren
+              kritik yetkilendirme açığı bulundu ve sorumlu şekilde bildirildi.
+            </p>
+            <div class="quest-footer">
+              <div class="quest-tags">
+                <span class="quest-tag">Web</span>
+                <span class="quest-tag">Bug Bounty</span>
+              </div>
+              <div style="text-align: right">
+                <p class="text-secondary" aria-label="Zorluk 3/5">
+                  ★★★<span style="color: var(--border)">★★</span>
                 </p>
+                <p class="quest-reward">+1000 XP</p>
+              </div>
             </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <h3>4. Sınıf</h3>
-                    <p>Bilgisayar Mühendisliği</p>
-                </div>
-                <div class="stat-card">
-                    <h3>%100</h3>
-                    <p>Öğrenme Tutkusu</p>
-                </div>
-            </div>
+          </article>
         </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-        <div class="section-title">
-            <h2><span class="hash">#</span> Yetenekler</h2>
-        </div>
-        <div class="skills-container">
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Yazılım Dilleri</h3>
-                </div>
-                <div class="skill-tags">
-                    <span>Python</span>
-                    <span>C</span>
-                    <span>C++</span>
-                    <span>C#</span>
-                </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section id="basarimlar" class="section-banded">
+        <div class="container section">
+          <div class="section-heading">
+            <p class="section-stage">STAGE 2-2</p>
+            <h2 class="section-title">AÇILAN BAŞARIMLAR</h2>
+            <p class="section-sub">Sertifikalar ve ödüller.</p>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="pixel-panel achievement-card frame-secondary text-secondary">
+              <p class="achievement-icon">🏆</p>
+              <p class="achievement-code">OSCP</p>
+              <p class="achievement-name">Offensive Security Certified Professional</p>
+              <p class="achievement-tier">LEGENDARY</p>
             </div>
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class='bx bx-lock-alt'></i>
-                    <h3>Siber Güvenlik</h3>
-                </div>
-                <div class="skill-tags">
-                    <span>Sızma Testi</span>
-                    <span>Savunma (Blue Team)</span>
-                    <span>Linux</span>
-                    <span>Ağ Güvenliği</span>
-                </div>
+            <div class="pixel-panel achievement-card frame-accent text-accent">
+              <p class="achievement-icon">🏆</p>
+              <p class="achievement-name" style="display: none"></p>
+              <p class="achievement-code">CEH</p>
+              <p class="achievement-name">Certified Ethical Hacker</p>
+              <p class="achievement-tier">EPIC</p>
             </div>
-            <div class="skill-category">
-                <div class="category-header">
-                    <i class='bx bx-brain'></i>
-                    <h3>Yapay Zeka & Araçlar</h3>
-                </div>
-                <div class="skill-tags">
-                    <span>Makine Öğrenmesi</span>
-                    <span>Scikit-learn</span>
-                    <span>Streamlit</span>
-                    <span>Metasploit</span>
-                    <span>OpenCV</span>
-                </div>
+            <div class="pixel-panel achievement-card frame-cyan text-cyan">
+              <p class="achievement-icon">🏆</p>
+              <p class="achievement-code">SEC+</p>
+              <p class="achievement-name">CompTIA Security+</p>
+              <p class="achievement-tier">RARE</p>
             </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="section-title">
-            <h2><span class="hash">#</span> Projeler</h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <i class='bx bx-bot'></i>
-                    <div class="project-links">
-                        <a href="https://github.com/Yusufkursun" target="_blank" aria-label="GitHub Link"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title">Yapay Zeka Destekli Mini SIEM Sistemi</h3>
-                <p class="project-description">
-                    "Yapay zekayı siber güvenlikle nasıl birleştiririm?" sorusuyla ortaya çıkan bu projede; laboratuvar ortamında Metasploit, SQLMap ve Nmap ile simüle edilen siber saldırılar üzerinden kendi mini SIEM sistemimi kurdum. 2.8 milyon paketlik devasa CICIDS2017 veri setiyle eğitilen Random Forest modeli ile DoS, DDoS ve Brute Force saldırılarını %100 başarıyla anında tespit eden bir sistem geliştirildi ve Streamlit ile dashboard'a döküldü.
-                </p>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>Scikit-learn</span>
-                    <span>Streamlit</span>
-                    <span>Metasploit</span>
-                    <span>Wireshark</span>
-                </div>
+            <div class="pixel-panel achievement-card frame-secondary text-secondary">
+              <p class="achievement-icon">🏆</p>
+              <p class="achievement-code">CTF</p>
+              <p class="achievement-name">Ulusal CTF Yarışması — 1.lik</p>
+              <p class="achievement-tier">LEGENDARY</p>
             </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <i class='bx bx-car'></i>
-                    <div class="project-links">
-                        <a href="https://github.com/Yusufkursun" target="_blank" aria-label="GitHub Link"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-                <h3 class="project-title">Mobil Otonom Şarj İstasyonu</h3>
-                <p class="project-description">
-                    <strong>TEKNOFEST Akıllı Ulaşım Kategorisi Yarı Finalisti:</strong> Sürdürülebilir enerji çözümlerini otonom mobilite ile birleştiren yenilikçi bir altyapı çalışması. OpenCV kullanılarak gerçek zamanlı görüntü işleme ve navigasyon algoritmaları geliştirilmiş olup, aracın sürücüsüz ilerleyebilmesi sağlanmıştır. Güneş panellerinden elde edilen enerjinin Lityum-İyon batarya bloklarına güvenli ve optimize bir şekilde aktarılması sağlanmış, kentsel lojistik ve akıllı şehir ekosistemleri için ticari/operasyonel fizibilitesi yapılmıştır.
-                </p>
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>OpenCV</span>
-                    <span>Otonom Sistemler</span>
-                    <span>Yenilenebilir Enerji</span>
-                </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT & TERMINAL -->
+      <section id="iletisim" class="container section">
+        <div class="section-heading">
+          <p class="section-stage">FINAL STAGE</p>
+          <h2 class="section-title">İLETİŞİM</h2>
+          <p class="section-sub">Bir güvenlik değerlendirmesi mi lazım? Bağlantı kur.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div id="terminal-box" class="pixel-frame frame-primary terminal-box animate-flicker">
+            <div class="terminal-header">
+              <span>■ ■ ■</span>
+              <span style="margin-left: 0.5rem">root@ykursun:~</span>
             </div>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="section-title">
-            <h2><span class="hash">#</span> İletişim</h2>
-        </div>
-        <div class="contact-content">
-            <p>Benimle iletişime geçmek, projelerim hakkında konuşmak veya siber güvenlik üzerine sohbet etmek isterseniz bana ulaşabilirsiniz.</p>
-            
-            <a href="mailto:yusuf77krsn@gmail.com" class="btn btn-primary contact-btn">Bana E-posta Gönder</a>
-            
-            <div class="social-links">
-                <a href="https://github.com/Yusufkursun" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/yusuf-kur%C5%9Fun-ba00401a3/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <div id="terminal-scroll" class="terminal-body" aria-live="polite">
+              <div id="terminal-output">
+                <p class="terminal-line text-primary">YK-OS v8.0 — güvenli bağlantı kuruldu.</p>
+                <p class="terminal-line text-primary">Başlamak için 'help' yaz.</p>
+              </div>
+              <form id="terminal-form" class="terminal-form">
+                <span class="text-accent">$</span>
+                <input
+                  id="terminal-input"
+                  type="text"
+                  aria-label="Terminal komutu"
+                  autocomplete="off"
+                  spellcheck="false"
+                  class="terminal-input"
+                />
+              </form>
             </div>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:yusuf77krsn@gmail.com" class="pixel-btn pixel-btn-primary contact-btn">
+              ✉ YUSUF77KRSN@GMAIL.COM
+            </a>
+            <a
+              href="https://github.com/Yusufkursun"
+              target="_blank"
+              rel="noreferrer"
+              class="pixel-btn pixel-btn-ghost contact-btn contact-btn-between"
+            >
+              <span>GITHUB</span>
+              <span class="text-secondary">▶</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yusuf-kur%C5%9Fun-ba00401a3/"
+              target="_blank"
+              rel="noreferrer"
+              class="pixel-btn pixel-btn-ghost contact-btn contact-btn-between"
+            >
+              <span>LINKEDIN</span>
+              <span class="text-secondary">▶</span>
+            </a>
+            <p class="pgp-note">
+              PGP anahtarı istek üzerine paylaşılır. Sorumlu ifşa bildirimlerine her zaman açığım.
+            </p>
+          </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Yusuf Kurşun. Tüm hakları saklıdır.</p>
-        <p class="footer-note">Designed with <i class='bx bx-terminal'></i> and curiosity.</p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="font-pixel text-accent glow-accent" style="font-size: 0.875rem">GAME OVER?</p>
+        <p class="font-pixel text-muted" style="font-size: 0.6rem">
+          DEVAM ETMEK İÇİN <span class="animate-blink text-secondary">COIN</span> AT
+        </p>
+        <p class="text-muted" style="margin-top: 1rem; font-size: 1.125rem">
+          © <span id="current-year">2026</span> YUSUF KURŞUN · Tüm sistemler güvende.
+        </p>
+      </div>
     </footer>
-    <!-- Custom JavaScript -->
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
