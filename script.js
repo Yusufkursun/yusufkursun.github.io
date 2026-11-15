@@ -26,6 +26,8 @@ const STATIC_OUTPUTS = {
     { kind: "out", text: "[✓] SOC & SIEM Kurulumu ★★★★" },
     { kind: "out", text: "[✓] Fidye Yazılımı Analizi ★★★★" },
     { kind: "out", text: "[✓] Bug Bounty: Kritik IDOR ★★★" },
+    { kind: "out", text: "[✓] Yapay Zeka Destekli Mini SIEM ★★★★★" },
+    { kind: "out", text: "[✓] Mobil Otonom Şarj İstasyonu ★★★★" },
   ],
   certs: [
     { kind: "out", text: "🏆 OSCP — Offensive Security Certified Professional" },
