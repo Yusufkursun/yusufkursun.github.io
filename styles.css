@@ -593,10 +593,12 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  transition: transform 75ms ease;
+  cursor: pointer;
+  transition: transform 75ms ease, box-shadow 150ms ease;
 }
 
 .quest-card:hover {
+  --frame: var(--secondary);
   transform: translateY(-4px);
 }
 

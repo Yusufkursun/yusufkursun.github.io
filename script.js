@@ -22,12 +22,12 @@ const STATIC_OUTPUTS = {
     { kind: "out", text: "Tersine Mühendislik....... ██████░░░░" },
   ],
   quests: [
-    { kind: "out", text: "[✓] Kurumsal Ağ Sızma Testi ★★★★★" },
+    { kind: "out", text: "[✓] MOŞİ ★★★★★" },
     { kind: "out", text: "[✓] SOC & SIEM Kurulumu ★★★★" },
+    { kind: "out", text: "[✓] City Trip Planner ★★★★" },
+    { kind: "out", text: "[✓] Spotify Verilerim ★★★" },
+    { kind: "out", text: "[✓] Kurumsal Ağ Sızma Testi ★★★★★" },
     { kind: "out", text: "[✓] Fidye Yazılımı Analizi ★★★★" },
-    { kind: "out", text: "[✓] Bug Bounty: Kritik IDOR ★★★" },
-    { kind: "out", text: "[✓] Yapay Zeka Destekli Mini SIEM ★★★★★" },
-    { kind: "out", text: "[✓] Mobil Otonom Şarj İstasyonu ★★★★" },
   ],
   certs: [
     { kind: "out", text: "🏆 OSCP — Offensive Security Certified Professional" },
